@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Panda 🎉🐼</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Add the favicon for the web page -->
+     <link rel="icon" href="./assets/panda.png" type="image/png">
+
+    <script>
+        // Function to animate the title text
+        let titleText = "HBD Panda 🎉🐼";
+        let direction = 1; // Forward scrolling
+
+        function animateTitle() {
+            titleText = titleText.substring(1) + titleText[0];
+            document.title = titleText;
+        }
+
+        // Start the title animation when the page loads
+        window.onload = function() {
+            setInterval(animateTitle, 300); // Adjust speed as needed
+        };
+    </script>
+</head>
+<body>
+    <div class="card" onmouseover="playMusic()">
+        <div class="imgBox flex-center">
+            <div class="bark"></div>
+            <img src="./assets/panda.jpg">
+        </div>
+        <div class="details">
+            <h4 class="color2">(HAPPY BIRTHDAY) 🐼</h3>
+            <p>Dear My Favorite Person,</p>
+            <p>Selamat Ulang Tahun! 🎉</p>
+            <p>Semoga hari istimewa ini membawa,</p>
+            <p>kebahagiaan, cinta, dan tawa yang</p>
+            <p>tiada henti. dan Semoga di tahun</p>
+            <p>ini semua impianmu tercapai, dipenuhi</p>
+            <p>dengan momen-momen indah.</p>
+            <p>dan semoga yang terbaik selalu</p>
+            <p>menyertaimu, hari ini dan selamanya!</p>
+            <p>Semangat ngerjain Skripsinya 😚</p>
+            <br/>
+            <p class="text-right">🐻</p>
+        </div>
+    </div>
+
+      <!-- Audio Element -->
+    <audio id="birthdaySong">
+        <source src="./assets/hbd.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      // Function to play music when the card is clicked
+      function playMusic() {
+          const audio = document.getElementById('birthdaySong');
+          audio.play();
+      }
+    </script>
+</body>
+</html>
