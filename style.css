@@ -139,6 +139,11 @@ h4 {
   text-align: right;
 }
 
+.text-center {
+  text-align: center;
+  margin-left: 76px;
+}
+
 .text-right.medium {
   font-size: 300px;
 }
